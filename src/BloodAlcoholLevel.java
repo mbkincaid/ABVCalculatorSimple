@@ -7,7 +7,6 @@ public class BloodAlcoholLevel {
 	
 	public static void main(String[] args) {
 		
-		
 		Scanner scnr = new Scanner(System.in);
 		
 		System.out.println("Male or Female?");
@@ -18,14 +17,17 @@ public class BloodAlcoholLevel {
 		} else {
 			c = .66;
 		}
-
+		
 		System.out.println("Body Weight?");
 		int weight = scnr.nextInt();
+		
 		System.out.println("Ounces drank?");
 		double ounces = scnr.nextDouble();
+		
 		System.out.println("ABV?");
 		double ABV = scnr.nextDouble();
 		double ouncesAlcohol = ounces * ABV;
+		
 		System.out.println("How many hours have you been drinking?");
 		double hours = scnr.nextDouble();
 		
@@ -34,7 +36,6 @@ public class BloodAlcoholLevel {
 		double bac = (ouncesAlcohol * 5.14) / (weight * c) - (.015 * hours);
 		DecimalFormat df = new DecimalFormat(".##");
 		String BAC = df.format(bac);
-		
 		
 		System.out.println("Your blood alcohol level is: " + BAC);
 		
