@@ -1,7 +1,8 @@
-import java.math.BigDecimal;
-import java.math.MathContext;
 import java.text.DecimalFormat;
 import java.util.Scanner;
+
+//readme
+//license
 
 public class BloodAlcoholLevel {
 	
@@ -34,7 +35,7 @@ public class BloodAlcoholLevel {
 //		% BAC = (ounces * 5.14 / weight x weightConstant) – .015 * hours
 		
 		double bac = (ouncesAlcohol * 5.14) / (weight * c) - (.015 * hours);
-		DecimalFormat df = new DecimalFormat(".##");
+		DecimalFormat df = new DecimalFormat("#.##");
 		String BAC = df.format(bac);
 		
 		System.out.println("Your blood alcohol level is: " + BAC);
@@ -48,6 +49,5 @@ public class BloodAlcoholLevel {
 		else {
 			System.out.println("You are safe to drive home");
 		}
-		
 	}
 }
